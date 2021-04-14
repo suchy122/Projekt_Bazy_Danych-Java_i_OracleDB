@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mieszkania.cfg.GUIConntroller">
+   <children>
+      <TabPane tabClosingPolicy="UNAVAILABLE" tabMaxHeight="40.0" tabMaxWidth="240.0" tabMinHeight="40.0" tabMinWidth="224.0">
+        <tabs>
+          <Tab text="%list.customers">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="760.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0" tabMinWidth="380.0">
+                          <tabs>
+                            <Tab text="%view.customers">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tab1" prefHeight="715.0" prefWidth="1200.0">
+                                            <columns>
+                                              <TableColumn fx:id="kId" minWidth="-Infinity" prefWidth="60.0" text="Id klienta" />
+                                              <TableColumn fx:id="kImie" prefWidth="188.0" text="Imię" />
+                                                <TableColumn fx:id="kNazwisko" prefWidth="280.0" text="Nazwisko" />
+                                                <TableColumn fx:id="kPesel" minWidth="0.0" prefWidth="362.0" text="PESEL" />
+                                                <TableColumn fx:id="kNr" prefWidth="309.0" text="Numer telefonu" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="%add.customers">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="741.0" prefWidth="1200.0">
+                                       <children>
+                                          <TextField fx:id="getKI" layoutX="180.0" layoutY="106.0" />
+                                          <Text layoutX="180.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imie" />
+                                          <Text layoutX="180.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko" />
+                                          <Text layoutX="180.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numer Telefonu" />
+                                          <Text layoutX="177.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pesel" />
+                                          <TextField fx:id="getKN" layoutX="180.0" layoutY="168.0" />
+                                          <TextField fx:id="getKP" layoutX="180.0" layoutY="229.0" />
+                                          <TextField fx:id="getKNT" layoutX="180.0" layoutY="282.0" />
+                                          <Button fx:id="addK" layoutX="181.0" layoutY="325.0" mnemonicParsing="false" onAction="#addK" text="Dodaj" />
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="%del.customers">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ComboBox fx:id="selectDelK" layoutX="197.0" layoutY="106.0" prefWidth="150.0" />
+                                          <Button fx:id="delK" layoutX="197.0" layoutY="149.0" mnemonicParsing="false" onAction="#delK" text="Usuń" />
+                                          <Text layoutX="197.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz klienta do usunięcia" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="%list.cities">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="760.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0" tabMinWidth="380.0">
+                           <tabs>
+                              <Tab text="%view.cities">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tab2" prefHeight="715.0" prefWidth="1200.0">
+                                             <columns>
+                                                <TableColumn fx:id="miId" minWidth="-Infinity" prefWidth="60.0" text="Id miasta" />
+                                                <TableColumn fx:id="miM" prefWidth="365.0" text="Miasto" />
+                                                <TableColumn fx:id="miK" prefWidth="131.0" text="Kod pocztowy" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="%add.cities">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="741.0" prefWidth="1200.0">
+                                       <children>
+                                          <TextField fx:id="getMiN" layoutX="236.0" layoutY="113.0" />
+                                          <Text layoutX="236.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwa miasta" />
+                                          <TextField fx:id="getMiK" layoutX="236.0" layoutY="177.0" />
+                                          <Text layoutX="236.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kod pocztowy" />
+                                          <Button fx:id="addMi" layoutX="236.0" layoutY="221.0" mnemonicParsing="false" onAction="#addMi" text="Dodaj" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="%del.cities">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="165.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz miasto do usunięcia" />
+                                          <Button fx:id="delMi" layoutX="165.0" layoutY="175.0" mnemonicParsing="false" onAction="#delMi" text="Usuń" />
+                                          <ComboBox fx:id="selectDelMi" layoutX="166.0" layoutY="132.0" prefWidth="150.0" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="%list.flats">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="760.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0" tabMinWidth="380.0">
+                           <tabs>
+                              <Tab text="%view.flats">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tab3" prefHeight="715.0" prefWidth="1200.0">
+                                             <columns>
+                                                <TableColumn fx:id="mieId" minWidth="-Infinity" prefWidth="88.0" text="Id mieszkania" />
+                                                <TableColumn fx:id="mieM" prefWidth="114.0" text="Miasto" />
+                                                <TableColumn fx:id="mieU" prefWidth="249.0" text="Ulica" />
+                                                <TableColumn fx:id="mieNB" prefWidth="295.0" text="Numer budynku" />
+                                                <TableColumn fx:id="mieNM" prefWidth="295.0" text="Numer mieszkania" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="%add.flats">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="741.0" prefWidth="1200.0">
+                                       <children>
+                                          <ComboBox fx:id="selectMieMi" layoutX="162.0" layoutY="89.0" prefWidth="150.0" />
+                                          <Text layoutX="162.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Miasto" />
+                                          <TextField fx:id="getMieU" layoutX="163.0" layoutY="149.0" />
+                                          <Text layoutX="162.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numer budynku" />
+                                          <Text layoutX="162.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ulica" />
+                                          <Text layoutX="162.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numer mieszkania" />
+                                          <TextField fx:id="getMieNB" layoutX="163.0" layoutY="212.0" />
+                                          <TextField fx:id="getMieNM" layoutX="163.0" layoutY="270.0" />
+                                          <Button fx:id="addMie" layoutX="162.0" layoutY="310.0" mnemonicParsing="false" onAction="#addMie" text="Dodaj" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="%del.flats">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ComboBox fx:id="selectDelMie" layoutX="162.0" layoutY="98.0" prefWidth="150.0" />
+                                          <Button fx:id="delMie" layoutX="162.0" layoutY="140.0" mnemonicParsing="false" onAction="#delMie" text="Usuń" />
+                                          <Text layoutX="162.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz wynajem do usunięcia" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="%list.employees">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="760.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0" tabMinWidth="380.0">
+                           <tabs>
+                              <Tab text="%view.employees">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tab4" prefHeight="715.0" prefWidth="1200.0">
+                                             <columns>
+                                                <TableColumn fx:id="pId" minWidth="-Infinity" prefWidth="98.0" text="Id pracownika" />
+                                                <TableColumn fx:id="pI" prefWidth="193.0" text="Imie" />
+                                                <TableColumn fx:id="pN" prefWidth="247.0" text="Nazwisko" />
+                                                <TableColumn fx:id="pD" prefWidth="242.0" text="Data zatrudnienia" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="%add.employees">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="741.0" prefWidth="1200.0">
+                                       <children>
+                                          <Button fx:id="addP" layoutX="170.0" layoutY="269.0" mnemonicParsing="false" onAction="#addP" text="Dodaj" />
+                                          <TextField fx:id="getPI" layoutX="173.0" layoutY="104.0" />
+                                          <Text layoutX="173.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imie" />
+                                          <Text layoutX="173.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko" />
+                                          <Text layoutX="173.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data zatrudnienia" />
+                                          <TextField fx:id="getPN" layoutX="173.0" layoutY="164.0" />
+                                          <TextField fx:id="getPDZ" layoutX="173.0" layoutY="218.0" promptText="RRRR-MM-DD" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="%del.employees">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ComboBox fx:id="selectDelP" layoutX="197.0" layoutY="120.0" prefWidth="150.0" />
+                                          <Button fx:id="delP" layoutX="197.0" layoutY="170.0" mnemonicParsing="false" onAction="#delP" text="Usuń" />
+                                          <Text layoutX="197.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz pracownika do usunięcia" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="%list.rent">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="195.0">
+                     <children>
+                        <TabPane prefHeight="760.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0" tabMinWidth="380.0">
+                           <tabs>
+                              <Tab text="%view.rent">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tab5" prefHeight="715.0" prefWidth="1200.0">
+                                             <columns>
+                                                <TableColumn fx:id="wId" minWidth="-Infinity" prefWidth="98.0" text="Id wynajmu" />
+                                                <TableColumn fx:id="wKIN" prefWidth="304.0" text="Imie i nazwisko klienta" />
+                                                <TableColumn fx:id="wPIN" prefWidth="337.0" text="Imie i nazwisko pracownika" />
+                                                <TableColumn fx:id="wM" prefWidth="451.0" text="Mieszkanie" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="%add.rent">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="741.0" prefWidth="1200.0">
+                                       <children>
+                                          <ComboBox fx:id="selectWK" layoutX="195.0" layoutY="138.0" prefWidth="150.0" />
+                                          <ComboBox fx:id="selectWP" layoutX="195.0" layoutY="200.0" prefWidth="150.0" />
+                                          <ComboBox fx:id="selectWM" layoutX="195.0" layoutY="265.0" prefWidth="150.0" />
+                                          <Text layoutX="195.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klient" />
+                                          <Text layoutX="195.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pracownik" />
+                                          <Text layoutX="195.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mieszkanie" />
+                                          <Button fx:id="addW" layoutX="191.0" layoutY="314.0" mnemonicParsing="false" onAction="#addW" text="Dodaj" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="%del.rent">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="152.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz wynajem do usunięcia" />
+                                          <Button fx:id="delW" layoutX="152.0" layoutY="160.0" mnemonicParsing="false" onAction="#delW" text="Usuń" />
+                                          <ComboBox fx:id="selectDelW" layoutX="152.0" layoutY="91.0" prefWidth="150.0" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</HBox>

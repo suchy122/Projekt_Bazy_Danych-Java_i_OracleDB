@@ -1,0 +1,2 @@
+login i hasło projektu bazy danych w sql developer
+login: mieszkania hasło: qwerty123
